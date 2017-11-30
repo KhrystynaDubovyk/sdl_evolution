@@ -20,5 +20,8 @@ To list expected HMI result codes in hmi_integration_guidelines for each HMI res
 ## Potential downsides
 None
 
+## Impact on existing code
+
+
 ## Alternatives considered
 N/A
