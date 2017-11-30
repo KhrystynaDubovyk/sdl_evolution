@@ -14,7 +14,7 @@ This proposal is to reach overall awareness and undertandig of the process of HM
 Currently resultCodes defined in HMI API.xml via the `Result` enum are not used at the individual RPC level.
 
 ## Proposed solution
-To list expected HMI result codes on API XML same as for mobile API.
+To list expected HMI result codes on API XML same as for mobile API.  
 To list expected HMI result codes in hmi_integration_guidelines for each HMI response.
 
 ## Potential downsides
