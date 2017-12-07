@@ -21,6 +21,8 @@ To list expected HMI result codes in hmi_integration_guidelines for each HMI res
 None
 
 ## Impact on existing code
+`param name="code" type="Integer" mandatory="true"` should be added to each `messagetype="response"`
+
 ### HMI API responses processed by SDL
 **1. Interface name="BasicCommunication"** 
 ```
