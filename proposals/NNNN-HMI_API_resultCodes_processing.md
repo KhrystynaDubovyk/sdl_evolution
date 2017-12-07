@@ -22,7 +22,7 @@ None
 
 ## Impact on existing code
 ### HMI API responses processed by SDL
-1. Interface name="BasicCommunication" 
+**1. Interface name="BasicCommunication"** 
 ```
 <function name="GetCapabilities" messagetype="response">
       <param name="capabilities" type="Common.ButtonCapabilities" array="true" minsize="1" maxsize="100" mandatory="true">
@@ -102,7 +102,7 @@ None
          <description>SUCCESS - in case the certificate is decrypted and placed to the same file from request.</description>
    </function>
    ```
-2. Interface name="SDL" 
+**2. Interface name="SDL"**
 ```
   <function name="ActivateApp" messagetype="response">
     <param name="isSDLAllowed" type="Boolean" mandatory="true" scope="internal"/>
@@ -160,7 +160,7 @@ None
 ```
 
 ### HMI API responses transferred by SDL to mobile application
-1. Interface name="Buttons" 
+**1. Interface name="Buttons"** 
 ```
     <function name="GetCapabilities" messagetype="response">
       <param name="capabilities" type="Common.ButtonCapabilities" array="true" minsize="1" maxsize="100" mandatory="true">
@@ -176,7 +176,7 @@ None
  <function name="ButtonPress" messagetype="response">
     </function>
 ```
-2. Interface name="VR"
+**2. Interface name="VR"**
 ```
 <function name="IsReady" messagetype="response">
     <param name="available" type="Boolean" mandatory="true">
@@ -232,7 +232,7 @@ None
   </function>
 ```
 
-3. Interface name="TTS"  
+**3. Interface name="TTS"**  
 ```
 <function name="GetCapabilities" messagetype="response">
     <param name="speechCapabilities" type="Common.SpeechCapabilities" minsize="1" maxsize="5" array="true" mandatory="true">
@@ -287,7 +287,7 @@ None
   </function>
 ```
 
-4. Interface name="UI"
+**4. Interface name="UI"**
 ```
 <function name="Alert" messagetype="response">
     <param name="tryAgainTime" type="Integer" mandatory="false" minvalue="0" maxvalue="2000000000">
@@ -454,7 +454,7 @@ None
   </function>
 ```
 
-5. Interface name="Navigation"
+**5. Interface name="Navigation"**
 ```
  <function name="IsReady" messagetype="response">
     <param name="available" type="Boolean" mandatory="true">
@@ -539,7 +539,7 @@ None
   </function>
 ```
 
-6. Interface name="VehicleInfo"
+**6. Interface name="VehicleInfo"**
 ```
  <function name="IsReady" messagetype="response">
     <param name="available" type="Boolean" mandatory="true">
@@ -825,7 +825,7 @@ None
   </function>
 ```
 
-7. Interface name="RC"
+**7. Interface name="RC"**
 ```
  <function name="IsReady" messagetype="response">
     <param name="available" type="Boolean" mandatory="true">
