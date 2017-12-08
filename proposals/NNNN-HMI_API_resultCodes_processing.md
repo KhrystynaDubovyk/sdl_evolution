@@ -873,7 +873,22 @@ None
     </param>
 </function>
 ```
+### Impacted RPCs  
+**HMI API responses processed by SDL**  
+**1. Interface name="BasicCommunication"**
+1. [UpdateAppList](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2771)
+2. [UpdateDeviceList](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2779)
+3. [AllowDeviceToConnect](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2797)
+4. [ActivateApp](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2824)
+5. [MixingAudioSupported](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2903)  
 
+**2. Interface name="SDL"**  
+6. [ActivateApp](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4730)  
+7. [GetUserFriendlyMessage](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4755)  
+8. [GetListOfPermissions](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4797)  
+9. [UpdateSDL](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4851)  
+10. [GetStatusUpdate](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4859)  
+11. [GetURLS](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4880)
  
 ## Alternatives considered
 N/A
