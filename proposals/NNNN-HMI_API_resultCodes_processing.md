@@ -22,7 +22,7 @@ To list expected HMI result codes in hmi_integration_guidelines for each HMI res
 None
 
 ## Impact on existing code
-`param name="code" type="Integer" mandatory="true"` should be added to each `messagetype="response"`  
+`param name="code" type="Result" mandatory="true"` should be added to each `messagetype="response"`  
 
 ```
 <param name="resultCode" type="Result" platform="documentation" mandatory="true">
