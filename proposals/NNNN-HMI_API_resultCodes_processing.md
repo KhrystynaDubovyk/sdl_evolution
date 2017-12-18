@@ -34,7 +34,7 @@ None
 ```
 
 ### Impacted RPCs  
-**HMI API responses processed by SDL**  
+#### **HMI API responses processed by SDL**  
 **1. Interface name="BasicCommunication"**
 1. [UpdateAppList](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2771)
 2. [UpdateDeviceList](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2779)
@@ -56,7 +56,7 @@ None
 15. [GetStatusUpdate](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4859)  
 16. [GetURLS](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4880)  
 
-**HMI API responses transferred by SDL to mobile application**  
+#### **HMI API responses transferred by SDL to mobile application**  
 **1. Interface name="Buttons"**  
 17. [GetCapabilities](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2669)  
 18. [ButtonPress](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2691)  
