@@ -1,7 +1,7 @@
 # HMI result codes usage at at the individual RPC level
 
 * Proposal: [SDL-NNNN](NNNN-filename.md)
-* Author: 
+* Author: [Khrystyna Dubovyk](https://github.com/KhrystynaDubovyk)
 * Status: **Awaiting review**
 * Impacted Platforms: [RPC]
 
