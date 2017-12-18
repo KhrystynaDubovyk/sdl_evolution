@@ -24,13 +24,16 @@ None
 ## Impact on existing code
 `param name="code" type="Result" mandatory="true"` should be added to each `messagetype="response"`  
 
-```
-<param name="resultCode" type="Result" platform="documentation" mandatory="true">
+```  
+</function>
+    <function name="UpdateAppList" messagetype="response">
+   <param name="resultCode" type="Result" platform="documentation" mandatory="true">
             <description>See Result</description>
             <element name="SUCCESS"/>
             <element name="INVALID_DATA"/>
             ...
-        </param> 
+    </param> 
+</function>
 ```
 
 ### Impacted RPCs  
