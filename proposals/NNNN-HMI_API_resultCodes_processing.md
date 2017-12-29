@@ -1,4 +1,4 @@
-# HMI result codes usage at at the individual RPC level
+# HMI result codes usage at the individual RPC level
 
 * Proposal: [SDL-NNNN](NNNN-filename.md)
 * Author: [Khrystyna Dubovyk](https://github.com/KhrystynaDubovyk)
@@ -38,7 +38,7 @@ None
 
 ### Impacted RPCs  
 #### **HMI API responses processed by SDL**  
-**1. Interface name="BasicCommunication"**
+**Interface name="BasicCommunication"**
 1. [UpdateAppList](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2771)
 2. [UpdateDeviceList](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2779)
 3. [AllowDeviceToConnect](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2797)
@@ -51,7 +51,7 @@ None
 10. [DecryptCertificate](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3065)  
 
 
-**2. Interface name="SDL"**  
+**Interface name="SDL"**  
 11. [ActivateApp](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4730)  
 12. [GetUserFriendlyMessage](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4755)  
 13. [GetListOfPermissions](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4797)  
@@ -60,11 +60,11 @@ None
 16. [GetURLS](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4880)  
 
 #### **HMI API responses transferred by SDL to mobile application**  
-**1. Interface name="Buttons"**  
+**Interface name="Buttons"**  
 17. [GetCapabilities](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2669)  
 18. [ButtonPress](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L2691)  
 
-**2. Interface name="VR"**  
+**Interface name="VR"**  
 19. [IsReady](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3084)  
 20. [AddCommand](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3115)  
 21. [DeleteCommand](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3132)  
@@ -74,7 +74,7 @@ None
 25. [GetLanguage](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3216)  
 26. [GetCapabilities](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3222)  
 
-**3. Interface name="TTS"**  
+**Interface name="TTS"**  
 27. [GetCapabilities](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3234)  
 28. [IsReady](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3251)  
 29. [Speak](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3271)  
@@ -84,7 +84,7 @@ None
 33. [GetLanguage](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3317)  
 34. [SetGlobalProperties](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3339)  
 
-**4. Interface name="UI"**  
+**Interface name="UI"**  
 35. [Alert](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3377)  
 36. [Show](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3419)  
 37. [AddCommand](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3437)  
@@ -109,7 +109,7 @@ None
 56. [ClosePopUp](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3831)  
 57. [SendHapticData](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3863)  
 
-**5. Interface name="Navigation"**  
+**Interface name="Navigation"**  
 58. [IsReady](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3872)  
 59. [SendLocation](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3913)  
 60. [ShowConstantTBT](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L3950)  
@@ -124,7 +124,7 @@ None
 69. [SubscribeWayPoints](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4081)  
 70. [UnsubscribeWayPoints](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4088)  
 
-**6. Interface name="VehicleInfo"**  
+**Interface name="VehicleInfo"**  
 71. [IsReady](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4097)  
 72. [GetVehicleType](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4105)  
 73. [ReadDID](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4120)  
@@ -134,7 +134,7 @@ None
 77. [UnsubscribeVehicleData](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4413)  
 78. [GetVehicleData](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4567)  
 
-**7. Interface name="RC"**  
+**Interface name="RC"**  
 79. [IsReady](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4894)  
 80. [GetCapabilities](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4903)  
 81. [SetInteriorVehicleData](https://github.com/smartdevicelink/sdl_core/blob/develop/src/components/interfaces/HMI_API.xml#L4918)  
