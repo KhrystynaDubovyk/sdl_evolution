@@ -7,7 +7,7 @@
 
 ## Introduction
 
-This proposal is to reach overall awareness and understandig of the process of HMI result codes creation, storing and updates.
+This proposal is to reach overall awareness and understanding of the process of HMI result codes creation, storing and updates.
 
 ## Motivation
 
