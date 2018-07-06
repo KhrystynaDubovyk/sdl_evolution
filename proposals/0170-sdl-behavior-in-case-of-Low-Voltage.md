@@ -33,7 +33,51 @@ During LOW_VOLTAGE state the following behavior is proposed:
 SDL resumes its regular work after receiving a "WAKE_UP" signal:
 * After receiving a "WAKE_UP" signal, all applications will be unregistered and the device disconnected
 * If "LOW_VOLTAGE" was received at the moment of writing to policies database, SDL and Policies Manager must keep policies database correct and working. After "WAKE_UP" policy database reflects the last known correct state.
+* If "LOW_VOLTAGE" was received at the moment of saving applications state to file system, SDL must keep resumption storage correct and working. After "WAKE_UP" resumption storage reflects the last known correct state.
 * SDL must be able to start up correctly in the next ignition cycle after it was powered off in low voltage state  
+* In case SDL received "LOW_VOLTAGE" signal from HMI, then "WAKE_UP" signal does not come and SDL shuts down, 
+  there will be no possibility in new ignition cycle to recognize that LOW_VOLTAGE event occured in previous ignition cycle. 
+* After LOW_VOLTAGE event - SDL has no possibility to store any data for the next ignition cycle.
+  Therefore in next ignition cycle SDL has possibility to resume all related app data(including HMI Level) from latest save 
+  before LOW VOLTAGE event.
+
+NOTE: SDL can not guarantee correct policy data base and resumption data saving in case LOW VOLTAGE event triggers restrictions to file system from OS side.
+
+**Resumption during LOW VOLTAGE event:** 
+
+*LIMITED HMI Level resumption:*
+ 
+- Any application that in LIMITED HMILevel unexpectedly disconnects 
+- during the time frame of 30 sec (inclusive) before "LOW_VOLTAGE" signal from HMI
+- and then registers during 30 sec. after "WAKE_UP" signal in the same ignition cycle
+- and there is no other application currently in LIMITED,
+  must be resumed to LIMITED HMILevel by SDL as well as related app data should be resumed
+  
+*FULL HMI Level resumption:*
+ 
+- Any application that in FULL HMILevel unexpectedly disconnects 
+- during the time frame of 30 sec (inclusive) before "LOW_VOLTAGE" signal from HMI
+- and then registers during 30 sec. after "WAKE_UP" signal in the same ignition cycle
+- and there is no other application currently in FULL,
+  must be resumed to FULL HMILevel by SDL as well as related app data should be resumed
+  
+If application in any HMI Level unexpectedly disconnects 
+- out of time frame of 30sec before "LOW_VOLTAGE" signal from HMI
+- and then registers after "WAKE_UP" signal during 30secs in the same ignition cycle
+  only related app data should be resumed without HMI Level
+  
+If application in any HMI Level unexpectedly disconnects 
+- during time frame of 30sec before "LOW_VOLTAGE" signal from HMI
+- and then registers after 30 secs passed after "WAKE_UP" signal in the same ignition cycle
+  only related app data should be resumed without HMI Level
+ 
+*In case SDL received "LOW_VOLTAGE" signal from HMI, then "WAKE_UP" signal does not come and SDL shuts down:*
+  
+  If app registers during first 30 secs after IGNITION ON: 
+- SDL resumes FULL or LIMITED (depends on app HMI Level which was active during last save of 
+  resumption state to file system before LowVoltage - up to 10 seconds ( configurable by ini file).
+  only if currently there is no other application in the same HMI Levels as required to resume   
+- If app registers after 30 secs passed after IGNITION_OFF - SDL resumes app data without HMI Level  
 
 
 ## Details of implementation  
