@@ -1,4 +1,4 @@
-# SDL behavior in case of LOW_VOLTAGE event
+# SDL resumption in case of LOW_VOLTAGE event
 
 * Proposal: [SDL-0184](184-Resumption-during-Low-Voltage.md)
 * Author: [Alexander Kutsan](https://github.com/LuxoftAKutsan)
