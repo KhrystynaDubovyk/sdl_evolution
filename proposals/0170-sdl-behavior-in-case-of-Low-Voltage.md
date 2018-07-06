@@ -2,7 +2,7 @@
 
 * Proposal: [SDL-0170](0170-sdl-behavior-in-case-of-Low-Voltage.md)
 * Author: [Alexander Kutsan](https://github.com/LuxoftAKutsan)
-* Status: **Accepted with Revisions**
+* Status: **In Review**
 * Impacted Platforms: [Core / Web / RPC]
 
 ## Introduction
