@@ -79,12 +79,9 @@ If application in any HMI Level unexpectedly disconnects
 
 ## Potential downsides  
 
-No ability to get response from SDL using this communication type.
 
 ## Alternatives considered  
 
- - Using existing Web Socket transport, adding new RPC's in HMI_API to implement new logic for triggering "frozen" mode, but in this case SDL should not freeze listening and processing messaged from HMI, that cause high power usage.
- - Using additional lightweight transport (mqueue) for sending `LOW_VOLTAGE`, `WAKE_UP`, `IGNITION_OFF` notifications, but it significantly increase complexity of porting SDL on custom OEM platforms and adds additional requirement for OEM manufacturer.
- - Using SIGSTOP/SIGCONT standard UNIX signals for `LOW_VOLTAGE`, `WAKE_UP` notifications, but there is no way to Send IGNITION notification after SIGSTOP. 
+ 
 
 
