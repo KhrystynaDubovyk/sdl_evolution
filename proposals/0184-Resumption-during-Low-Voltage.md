@@ -76,6 +76,7 @@ If application in any HMI Level unexpectedly disconnects
 
 ## Details of implementation  
 
+Described SDL behaviour matches current resumption rules 
 
 ## Potential downsides  
 
