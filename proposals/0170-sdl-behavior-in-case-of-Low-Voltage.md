@@ -79,6 +79,7 @@ If application in any HMI Level unexpectedly disconnects
   only if currently there is no other application in the same HMI Levels as required to resume   
 - If app registers after 30 secs passed after IGNITION_OFF - SDL resumes app data without HMI Level  
 
+*NOTE:* Described SDL behaviour matches current resumption rules
 
 ## Details of implementation  
 
