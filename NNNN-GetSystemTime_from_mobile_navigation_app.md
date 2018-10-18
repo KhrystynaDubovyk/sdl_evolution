@@ -1,5 +1,5 @@
 
-# Send app permissions within registration
+# Get System Time from mobile GPS source
 
 * Proposal: [SDL-NNNN](NNNN-GetSystemTime_from_mobile_navigation_app.md)
 * Author: [Andriy Byzhynar](https://github.com/AByzhynar)
