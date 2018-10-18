@@ -18,8 +18,10 @@ This will allow to start secured Navigation service even head unit GPS is down b
 
 Resolved Problems with the approach :
 
-    SDL requires real system time (based on current time zone which is provided by GPS) for security certificate validation in       order to start secured service
-    In current implementation SDL can start non-secured services ONLY if head unit GPS does not work/unavailable by some reason
+    SDL requires real system time (based on current time zone which is provided by GPS) 
+    for security certificate validation in order to start secured service
+    In current implementation SDL can start non-secured services ONLY if head unit GPS 
+    does not work/unavailable by some reason
 
 ## Proposed solution
 
