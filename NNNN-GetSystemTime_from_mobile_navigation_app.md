@@ -8,17 +8,17 @@
 
 ## Introduction
 
-Get real system time from GPS source located in mobile device if Head unit GPS does not work by some reason
+Get real system time from GPS source located in mobile device (`NAVIGATION` app service) if head unit can not provide system time by some reason
 
 
 ## Motivation
 
-This will allow to start secured Navigation service even head unit GPS is down by some reason. 
+This will allow to start secured Navigation streaming even head unit system time is down by some reason. 
 
 
 Resolved Problems with the approach :
 
-    SDL requires real system time (based on current time zone which is provided by GPS) 
+    SDL requires real system time (based on current time zone which is provided by head unit system) 
     for security certificate validation in order to start secured service
     In current implementation SDL can start non-secured services ONLY if head unit GPS 
     does not work/unavailable by some reason
@@ -27,6 +27,20 @@ Resolved Problems with the approach :
 
 Proposed to extend app service `NAVIGATION` with GetSystemTime RPC
 
+## Additions to MOBILE_API
+
+GetSystemTime request\response
+
+```xml
+<function name="GetSystemTime" messagetype="request">
+    <description>Request from SDL to Navigation Service to obtain current UTC time.</description>
+</function>
+<function name="GetSystemTime" messagetype="response">
+    <param name="systemTime" type="Common.DateTime" mandatory="true">
+      <description>Current UTC system time</description>
+    </param>
+</function>
+```
  
 ## Potential downsides
 
