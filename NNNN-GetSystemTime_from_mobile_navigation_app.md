@@ -13,15 +13,14 @@ Get real system time from GPS source located in mobile device (`NAVIGATION` app 
 
 ## Motivation
 
-This will allow to start secured Navigation streaming even head unit system time is down by some reason. 
+This will allow to start secured Navigation streaming even head unit system time is down by some reason at this time. 
 
 
 Resolved Problems with the approach :
 
     SDL requires real system time (based on current time zone which is provided by head unit system) 
     for security certificate validation in order to start secured service
-    In current implementation SDL can start non-secured services ONLY if head unit GPS 
-    does not work/unavailable by some reason
+    In current implementation SDL can start non-secured services ONLY if head unit can not provide system time by some reason
 
 ## Proposed solution
 
@@ -44,9 +43,11 @@ GetSystemTime request\response
  
 ## Potential downsides
 
- - SDL must trust mobile information received from mobile device. 
-   This may lead to situation when security certificate received from mobile for establishing secure connection is actually expired(or not yet valid) 
+ - SDL must trust information received from mobile device. 
+   This may lead to situation when security certificate received from mobile for establishing secure connection is actually expired (or not yet valid) 
    but SDL consider it as valid due to wrong/false time received from mobile source.
+   Therefore during `NAVIGATION` service registration - it is required to get system time from head unit to start service securely.
+   So `GetSystemTime` should be sent to mobile only encrypted.
 
 ## Impact on existing code
 
