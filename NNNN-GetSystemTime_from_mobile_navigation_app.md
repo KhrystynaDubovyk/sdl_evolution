@@ -30,12 +30,15 @@ Proposed to extend app service `NAVIGATION` with GetSystemTime RPC
  
 ## Potential downsides
 
- - N/A
+ - SDL must trust mobile information received from mobile device. 
+   This may lead to situation when security certifcate received from mobile for establishing secure connection is actually expired(or not yet valid) 
+   but SDL consider it as valid due to wrong/false time received from mobile source.
 
 ## Impact on existing code
 
  Will require handling of additional GetSystemTime request/response
-
-
-## Alternatives considered
  
+## Alternatives considered
+
+Assuming that head unit has its own independent access to internet, 
+SDL can use NTP (Network Time Protocol) for getting system time and processing secure connection.
