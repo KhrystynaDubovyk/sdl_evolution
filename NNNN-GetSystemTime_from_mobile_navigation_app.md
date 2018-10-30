@@ -41,4 +41,4 @@ Proposed to extend app service `NAVIGATION` with GetSystemTime RPC
 ## Alternatives considered
 
 Assuming that head unit has its own independent access to internet, 
-SDL can use [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol)(NTP) for getting system time and processing secure connection.
+SDL can use [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol) (NTP) for getting system time and processing secure connection.
